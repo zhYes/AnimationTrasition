@@ -5,7 +5,7 @@ iOS 转场动画 push pop
 ![效果.gif](https://upload-images.jianshu.io/upload_images/1914107-5f7c692a46327f71.gif?imageMogr2/auto-orient/strip)
 
 > # 第0步 : 下载，拖入项目中。
-使用说明：https://www.jianshu.com/p/2b9a241efb2d
+[使用说明](https://www.jianshu.com/p/2b9a241efb2d)
 
 > # 第1步 : 导入头文件
 
