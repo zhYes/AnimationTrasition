@@ -71,5 +71,7 @@ iOS 转场动画 push pop
 [cell.carImageView setContentMode:UIViewContentModeScaleAspectFit];
 ```
 [使用说明](https://www.jianshu.com/p/2b9a241efb2d)
+**  **
+
 原理讲解参考：[iOS自定义交互式转场动画-仿微信图片转场、酷狗转场 (从零到一 + 交互式图片浏览器)](https://www.jianshu.com/p/ec08f43808aa)
 
