@@ -17,7 +17,7 @@ iOS 转场动画 push pop
 ```
 
 
->#第2步 : 设置代理
+> # 第2步 : 设置代理
 
 ```
 //1.设置代理
@@ -25,7 +25,7 @@ iOS 转场动画 push pop
     self.navigationController.delegate = self.animatedTransition;
 ```
 
-> #第3步 ： 设置参数 完成跳转
+> # 第3步 ： 设置参数 完成跳转
 
 ```
     GWMCarSourceTableViewCell * cell = (GWMCarSourceTableViewCell *)[self.carListTableView cellForRowAtIndexPath:indexPath];
