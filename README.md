@@ -21,7 +21,7 @@ iOS 转场动画 push pop
 
 ```
 //1.设置代理
-    self.animatedTransition = nil;
+    self.animatedTransition = [[LYQuestionsOneAnimationTrasition alloc] init];
     self.navigationController.delegate = self.animatedTransition;
 ```
 
@@ -49,13 +49,6 @@ iOS 转场动画 push pop
     return [view.superview convertRect:view.frame toView:nil];
 }
 
-//懒加载
-- (LYQuestionsOneAnimationTrasition *)animatedTransition{
-    if (!_animatedTransition) {
-        _animatedTransition = [[LYQuestionsOneAnimationTrasition alloc] init];
-    }
-    return _animatedTransition;
-}
 ```
 **  **
 **  **
@@ -69,6 +62,13 @@ iOS 转场动画 push pop
 [self performSelector:@selector(delayMethods) withObject:nil afterDelay:0.25];//需要用到转场动画的地方
 //2.图片的模式最好设置成 UIViewContentModeScaleAspectFit
 [cell.carImageView setContentMode:UIViewContentModeScaleAspectFit];
+//3.A->B   B->C  如果仅仅B->C实现效果且B->A不使用 在B中增加 :
+- (void)viewWillAppear:(BOOL)animated {
+    if ([self.navigationController.childViewControllers.lastObject isKindOfClass:[self class]]) {
+        self.navigationController.delegate = nil;//pop不使用过度动画
+    }
+    [super viewWillAppear:animated];
+}
 ```
 [使用说明](https://www.jianshu.com/p/2b9a241efb2d)
 **  **
